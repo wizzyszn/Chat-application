@@ -12,7 +12,7 @@ const app = express()
 app.use(express.json())
 app.use(cors({origin : '*'}))
 app.get('/', (req,res,next) =>{
-    res.status(200).send('Server is working');
+    res.status(200).send("API is up and Running check https://github.com/wizzyszn to read docs on use it's services");
     next()
 }) 
 app.use('/api/users', userRoute)
