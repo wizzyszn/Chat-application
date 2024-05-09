@@ -3,7 +3,7 @@ const http = require('http')
 const server = http.createServer()
 let onlineUsers = []
 const io = new Server(server, {
-  cors: 'http://localhost:5173'
+  cors: 'https://front-end-chat-application.vercel.app'
 })
 io.on('connection', (socket) => {
   console.log('new connection on : ', socket.id)
