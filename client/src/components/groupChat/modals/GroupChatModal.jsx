@@ -1,5 +1,5 @@
 import ReactDOM from 'react-dom'
-import GroupUserChats from '../groupUserChats'
+import GroupUserChats from '../GroupUserChats'
 import SelectedUsers from '../SelectedUsers'
 import { useContext, useState } from 'react'
 import { GroupContext } from '../../../context/groupChatContext'
