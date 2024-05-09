@@ -11,6 +11,10 @@ require('dotenv').config()
 const app = express()
 app.use(express.json())
 app.use(cors({origin : '*'}))
+app.get('/', (req,res,next) =>{
+    res.status(200).send('Server is working');
+    next()
+}) 
 app.use('/api/users', userRoute)
 app.use('/api/chat', chatRoute)
 app.use('/api/messages',messageRoute )
@@ -24,7 +28,7 @@ app.use((err, req, res, next) => {
     }
     next();
   });
-  
+
 mongoose.connect(process.env.MONGODB_URL, {
  useNewUrlParser  : true,
  useUnifiedTopology : true
